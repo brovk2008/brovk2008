@@ -199,16 +199,21 @@ Research and implementation around **RAG pipelines**, **model training from scra
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=brovk2008&show_icons=true&theme=catppuccin_mocha&hide_border=true&include_all_commits=true&count_private=false&rank_icon=percentile" alt="GitHub Stats" height="165"/>
-<img src="https://streak-stats.demolab.com/?user=brovk2008&theme=catppuccin_mocha&hide_border=true" alt="GitHub Streak" height="165"/>
+<img height="195" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=brovk2008&theme=github_dark" alt="GitHub Stats"/>
+<img height="195" src="https://streak-stats.demolab.com/?user=brovk2008&theme=github_dark&hide_border=true" alt="GitHub Streak"/>
 
 <br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=brovk2008&layout=compact&theme=catppuccin_mocha&hide_border=true&langs_count=8" alt="Top Languages" height="165"/>
+<img width="97%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=brovk2008&theme=github_dark" alt="Contribution Graph"/>
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=brovk2008&theme=catppuccin-mocha&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Contribution Graph"/>
+<img height="195" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=brovk2008&theme=github_dark" alt="Top Languages by Commit"/>
+<img height="195" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=brovk2008&theme=github_dark" alt="Top Languages by Repo"/>
+
+<br/><br/>
+
+<img width="97%" src="https://github-readme-activity-graph.vercel.app/graph?username=brovk2008&bg_color=0d1117&color=8b949e&line=58a6ff&point=58a6ff&area=true&area_color=21262d&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution Activity"/>
 
 </div>
 
