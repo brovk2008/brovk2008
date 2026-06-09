@@ -2,277 +2,230 @@
 
 <img src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/banner.png" alt="Vaibhav Kumar — AI, Robotics & Systems Engineering" width="100%"/>
 
-<br/><br/>
+</div>
+
+<br/>
 
 # Vaibhav Kumar
 
-### Engineering intelligent systems at the intersection of AI, robotics, and product.
-
-**AI & Robotics Builder** · **Desktop Software Engineer** · **Automation Architect**
+**Building intelligent systems that run on real machines — not just in notebooks.**
 
 <br/>
 
-I design and ship systems that connect **local AI**, **computer vision**, **embedded hardware**, and **desktop software** into products people can actually use — not demos that stop at the notebook.
-
-**Current focus:** AetherXD desktop ecosystem · Revolver D content pipeline · robotics & perception R&D
-
-<br/>
-
-[![GitHub](https://img.shields.io/badge/GitHub-brovk2008-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brovk2008)
-[![X](https://img.shields.io/badge/X-@vaibhav6312-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/vaibhav6312)
-[![Company](https://img.shields.io/badge/Mech-Building-0A66C2?style=for-the-badge)](https://github.com/brovk2008)
-
-</div>
-
----
-
-## Builder Philosophy
-
-> Ship systems, not snippets. Optimize for leverage over novelty.
-
-| Principle | In practice |
+| | |
 | :--- | :--- |
-| **Systems thinking** | Compose agents, models, hardware, and UI into coherent workflows — not isolated scripts. |
-| **AI + robotics integration** | Bridge perception, control, and inference so software decisions reach the physical world. |
-| **Product discipline** | Every build must solve a real problem, survive daily use, and scale with the user's ambition. |
-| **Local-first intelligence** | Train, optimize, and deploy models where latency, privacy, and ownership matter. |
-| **Long-horizon engineering** | Favor architectures that compound — reusable primitives, clean interfaces, documented trade-offs. |
+| **Flagship builds** | **AetherXD** · **Revolver D** |
+| **Engineering focus** | Local AI · agent runtimes · computer vision · robotics perception · desktop software |
+| **Operating mode** | Founder-builder — ship products, extract systems, compound over years |
+
+<br/>
+
+I build software where **AI meets the physical world**: desktop platforms that orchestrate local models, perception pipelines that see and decide in real time, and automation layers that turn intent into action. The through-line is the same across every project — **own the stack from inference to interface**, design for daily use, and treat every prototype as a step toward a product someone would actually run.
+
+What makes the work interesting: I'm not optimizing for tutorials completed. I'm building toward **closed-loop intelligent systems** — software that perceives, reasons, acts, and improves within environments people already live in.
+
+<br/>
+
+[![GitHub](https://img.shields.io/badge/GitHub-brovk2008-0d1117?style=flat-square&logo=github)](https://github.com/brovk2008)
+[![X](https://img.shields.io/badge/X-@vaibhav6312-0d1117?style=flat-square&logo=x)](https://x.com/vaibhav6312)
+
+<br/>
 
 ---
 
-## Featured Work
+<br/>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+## Flagship Projects
+
+<br/>
 
 ### AetherXD
 
-**AI-powered desktop ecosystem**
+**The problem:** AI tooling is fragmented across cloud APIs, CLI scripts, and single-purpose apps. Builders lose context switching between agents, models, automation, and system control — intelligence stays disconnected from the machine it should run on.
 
-A unified local platform combining **automation**, **AI agents**, **local model inference**, **productivity tooling**, and **system-level control** — designed as a daily-driver environment for builders who want intelligence on their machine, not only in the cloud.
+**The solution:** A local-first desktop ecosystem that unifies **AI agents**, **automation**, **local model inference**, **productivity tooling**, and **OS-level control** into one coherent environment.
 
-`Desktop` · `Agents` · `Automation` · `Local LLMs` · `System Integration`
+**Technical challenge:** Designing an agent runtime that coordinates multiple local models, tool calls, and system actions without sacrificing latency, privacy, or reliability — while remaining usable as a daily driver, not a developer-only experiment.
 
-</td>
-<td width="50%" valign="top">
+**Where it's going:** Agent orchestration layer → modular plugin architecture → open core components for local AI workflows.
+
+<br/>
+
+---
+
+<br/>
 
 ### Revolver D
 
-**AI-assisted content creation platform**
+**The problem:** Creative production — video, design, asset generation — involves repetitive manual steps across disconnected tools. Iteration cycles are slow; creative energy gets spent on process, not output.
 
-An end-to-end pipeline for **video production**, **design automation**, **asset generation**, and **workflow acceleration** — reducing creative iteration time through intelligent tooling and structured pipelines.
+**The solution:** An AI-assisted content creation platform that structures **video production**, **design automation**, **asset generation**, and **workflow acceleration** into a single intelligent pipeline.
 
-`Content AI` · `Video` · `Design Automation` · `Asset Gen` · `Workflows`
+**Technical challenge:** Chaining multimodal AI outputs (text, image, video) through reliable pipelines where each stage's output is valid input for the next — without brittle glue code or manual handoffs.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+**Where it's going:** MVP content pipeline → template-driven generation → integrated creative workflow engine.
 
-### Robotics & Embedded
+<br/>
 
-**Hardware → software → intelligence**
+---
 
-Experiments across **embedded systems**, **control logic**, **sensor integration**, and **Unity-based simulation** — exploring how intelligent machines perceive, decide, and act in real environments.
-
-`Embedded` · `Control Systems` · `Unity` · `Automation` · `Hardware`
-
-</td>
-<td width="50%" valign="top">
+<br/>
 
 ### Computer Vision
 
-**Perception in real time**
+**The problem:** Perception models are easy to train in isolation but hard to deploy as responsive, usable services that integrate with real applications.
 
-Building blocks for **detection**, **tracking**, and **AI-assisted vision** — from applied ML pipelines to deployable perception services.
+**The solution:** Applied CV systems for **detection**, **classification**, and **real-time inference** — built as deployable pipelines, not notebook exercises.
 
-[`emotion-detection-project`](https://github.com/brovk2008/emotion-detection-project) · [`rain-detect`](https://github.com/brovk2008/rain-detect)
+**Technical challenge:** Bridging model accuracy with serving latency: getting inference out of Jupyter and into Flask-backed services that respond fast enough to matter.
 
-`OpenCV` · `Real-time CV` · `Flask` · `Model Serving`
+**Where it's going:** Unified perception module → real-time tracking layer → integration into robotics and desktop agent workflows.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+**In code:** [`emotion-detection-project`](https://github.com/brovk2008/emotion-detection-project) · [`rain-detect`](https://github.com/brovk2008/rain-detect)
+
+<br/>
+
+---
+
+<br/>
 
 ### Local AI Research
 
-**Train · optimize · deploy · orchestrate**
+**The problem:** Cloud-dependent AI creates latency, cost, and ownership problems. Most developers can call an API — far fewer can train, optimize, and run models locally with control over the full stack.
 
-Research and implementation around **RAG pipelines**, **model training from scratch**, and **local inference orchestration** — prioritizing ownership, latency, and reproducibility.
+**The solution:** Hands-on work across **RAG architectures**, **model training from scratch**, and **local inference pipelines** — prioritizing reproducibility, ownership, and deployment on hardware you control.
 
-[`RAG-for-IBM`](https://github.com/brovk2008/RAG-for-IBM) · [`Basic_ai_from_scratch`](https://github.com/brovk2008/Basic_ai_from_scratch)
+**Technical challenge:** Making retrieval-augmented systems and custom models practical: chunking strategies, embedding quality, context window management, and inference performance on consumer hardware.
 
-`RAG` · `Embeddings` · `Fine-tuning` · `Inference` · `Python`
+**Where it's going:** Local model orchestration layer → optimized inference runtime → shared primitives extracted for AetherXD.
 
-</td>
-<td width="50%" valign="top">
+**In code:** [`RAG-for-IBM`](https://github.com/brovk2008/RAG-for-IBM) · [`Basic_ai_from_scratch`](https://github.com/brovk2008/Basic_ai_from_scratch)
 
-### Shipped & Applied Work
-
-**Products and competitions with real constraints**
-
-[`weather-checking`](https://github.com/brovk2008/weather-checking) — deployed weather utility · [`Project-sentinal`](https://github.com/brovk2008/Project-sentinal) — H2S datathon build · [`mindmendor`](https://github.com/brovk2008/mindmendor) — mental health assistant bot
-
-`TypeScript` · `Vercel` · `Hackathons` · `Applied AI`
-
-</td>
-</tr>
-</table>
+<br/>
 
 ---
 
-## Technology Stack
-
-<details open>
-<summary><b>Languages</b></summary>
 <br/>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
+### Robotics
 
-</details>
+**The problem:** Software intelligence and physical machines speak different languages. Bridging perception, decision-making, and actuation requires engineering across embedded systems, simulation, and control — not just ML.
 
-<details open>
-<summary><b>AI / ML</b></summary>
+**The solution:** Experiments across **embedded systems**, **sensor integration**, **control logic**, and **Unity-based simulation** — prototyping how intelligent software closes the loop from sensing to action.
+
+**Technical challenge:** Fusing heterogeneous sensor data into decisions that control physical or simulated actuators reliably — where a wrong inference has real consequences, not just a bad metric.
+
+**Where it's going:** Perception-to-control pipeline → sensor fusion prototypes → integration with AetherXD agent runtime.
+
 <br/>
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
-
-</details>
-
-<details>
-<summary><b>Desktop Development</b></summary>
-<br/>
-
-![Electron](https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![Tauri](https://img.shields.io/badge/Tauri-FFC131?style=flat-square&logo=tauri&logoColor=black)
-![Unity](https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white)
-
-</details>
-
-<details>
-<summary><b>Backend · Frontend · Data</b></summary>
-<br/>
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-
-</details>
-
-<details>
-<summary><b>DevOps · Cloud · Hardware · Tools</b></summary>
-<br/>
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
-
-</details>
 
 ---
 
-## GitHub Analytics
+<br/>
 
-<div align="center">
+## Current Engineering Journey
 
-<img src="https://github-readme-stats.vercel.app/api?username=brovk2008&show_icons=true&theme=catppuccin_mocha&hide_border=true&include_all_commits=true&count_private=false&rank_icon=percentile" alt="GitHub Stats" height="165"/>
-<img src="https://streak-stats.demolab.com/?user=brovk2008&theme=catppuccin_mocha&hide_border=true" alt="GitHub Streak" height="165"/>
+<br/>
 
-<br/><br/>
+```
+Now ──────────────────────────────────────────────────────────────►
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=brovk2008&layout=compact&theme=catppuccin_mocha&hide_border=true&langs_count=8" alt="Top Languages" height="165"/>
+  LOCAL AI          Building RAG pipelines and training models from
+                    first principles. Exploring how local inference
+                    slots into agent architectures without cloud deps.
+                    → RAG-for-IBM · Basic_ai_from_scratch
 
-<br/><br/>
+  AGENT DESIGN      Architecting AetherXD's runtime: tool routing,
+                    context management, and system-level actions from
+                    a single agent interface.
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=brovk2008&theme=catppuccin-mocha&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Contribution Graph"/>
+  PERCEPTION        Hardening CV serving layers — moving from trained
+                    models to responsive detection services that other
+                    systems can call.
+                    → emotion-detection-project · rain-detect
 
-</div>
+  DESKTOP SYSTEMS   Desktop shell and integration layer for AetherXD —
+                    where agents, automation, and local models converge
+                    into one environment.
 
----
+  ROBOTICS          Embedded experiments and Unity simulation — testing
+                    how perception outputs drive control decisions in
+                    physical and simulated environments.
 
-## Current Objectives
-
-```mermaid
-timeline
-    title Engineering Roadmap
-    section Near-term
-        AetherXD core : Agent runtime & desktop shell
-        Revolver D MVP : Video & asset pipeline v1
-        CV pipelines : Harden detection & serving layers
-    section Mid-term
-        Robotics stack : Sensor fusion & control integration
-        Local AI lab : Model optimization & orchestration layer
-        Open components : Extract reusable modules from flagship builds
-    section Long-term
-        Intelligent machines : Closed-loop perception-to-action systems
-        Product suite : AetherXD + Revolver D as integrated builder platform
-        Research output : Document architectures, publish selective OSS primitives
+  CREATIVE AI       Revolver D pipeline architecture — structuring
+                    multimodal generation into repeatable workflows.
 ```
 
-| Horizon | Goals |
-| :--- | :--- |
-| **Near-term** | Ship AetherXD agent runtime · Revolver D content MVP · production-grade CV serving |
-| **Mid-term** | Robotics perception-control loop · local model orchestration · open-source core modules |
-| **Long-term** | Autonomous intelligent systems · integrated AI product platform · public technical research |
+<br/>
 
 ---
 
-## Collaboration
+<br/>
 
-<div align="center">
-
-I collaborate with people who build with urgency and think in systems.
-
-| | |
-| :---: | :--- |
-| **Contributors** | Help shape open modules from AetherXD, Revolver D, and CV tooling |
-| **Researchers** | Co-explore local inference, robotics perception, and agent architectures |
-| **Developers** | Pair on hard problems across desktop, backend, and embedded stacks |
-| **Hackathon teams** | Ship fast under constraints — I bring full-stack + AI integration |
-| **Founders & builders** | Exchange ideas on product architecture, automation, and technical strategy |
+## Systems I Care About
 
 <br/>
 
-**Open to:** research collaborations · hackathon teams · selective co-building · technical advisory
+**Intelligent agents** — Not chatbots. Agents that use tools, maintain context, take actions, and operate across desktop and system layers with accountability.
 
-[![Contact](https://img.shields.io/badge/Contact-Open%20an%20Issue-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brovk2008/Project-sentinal/issues/new)
+**Human-computer interaction** — Software should feel like an extension of intent. Desktop environments, not dashboards. Speed and clarity over feature count.
 
-</div>
+**Robotics & embodied AI** — Intelligence that reaches the physical world. Sensor fusion, control systems, simulation-to-reality transfer.
+
+**Automation infrastructure** — Reliable pipelines that replace repetitive human workflows — from content production to system administration.
+
+**Computer vision & perception** — Real-time detection and tracking as primitives that higher-level systems (agents, robots, products) build on.
+
+**Local inference & AI infrastructure** — Models you own, on hardware you control. Training, optimization, deployment, and orchestration without cloud dependency.
+
+<br/>
 
 ---
 
-<div align="center">
+<br/>
 
-### Connect
-
-[![GitHub](https://img.shields.io/badge/brovk2008-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brovk2008)
-[![X](https://img.shields.io/badge/@vaibhav6312-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/vaibhav6312)
+## Shipped Work
 
 <br/>
+
+Projects with real constraints — deadlines, deployments, and users.
+
+<br/>
+
+| Project | What it is | Link |
+| :--- | :--- | :--- |
+| **weather-checking** | Deployed weather utility · TypeScript · live on Vercel | [repo](https://github.com/brovk2008/weather-checking) · [live](https://checkweatherherehehe.vercel.app) |
+| **Project-sentinal** | H2S datathon build — shipped under competition constraints | [repo](https://github.com/brovk2008/Project-sentinal) |
+| **mindmendor** | Mental health assistant bot | [repo](https://github.com/brovk2008/mindmendor) |
+| **IBM-Data-Analysis-Assignment** | Full data analysis pipeline with documentation | [repo](https://github.com/brovk2008/IBM-Data-Analysis-Assignment) |
+
+<br/>
+
+---
+
+<br/>
+
+## Work With Me
+
+<br/>
+
+I'm open to collaborating with people who ship under pressure and think in systems.
+
+**Contributors** — shape open modules from CV tooling, RAG pipelines, and future AetherXD components.
+
+**Researchers** — co-explore local inference, agent architectures, and perception-to-action loops.
+
+**Hackathon teams** — I bring full-stack integration, AI pipeline design, and rapid prototyping.
+
+**Builders & founders** — exchange ideas on product architecture, technical strategy, and ambitious system design.
+
+<br/>
+
+Reach me on **[X @vaibhav6312](https://x.com/vaibhav6312)** or open an issue on any repo above.
+
+<br/>
+
+<div align="center">
 
 <sub>Building the infrastructure for intelligent machines — one system at a time.</sub>
 
