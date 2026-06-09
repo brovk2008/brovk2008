@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/banner.png" alt="Vaibhav Kumar — AI, Robotics & Systems Engineering" width="100%"/>
+
+<br/><br/>
+
 # Vaibhav Kumar
 
 ### Engineering intelligent systems at the intersection of AI, robotics, and product.
