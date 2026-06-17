@@ -276,6 +276,7 @@ I collaborate with people who build with urgency and think in systems.
 
 [![GitHub](https://img.shields.io/badge/brovk2008-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brovk2008)
 [![X](https://img.shields.io/badge/@vaibhav6312-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/vaibhav6312)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-vaibhav--kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-kumar-347506251/)
 
 <br/>
 
