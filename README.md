@@ -2,13 +2,10 @@
   <img src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/banner.png" width="100%" alt="Vaibhav Kumar"/>
 </div>
 
-<br/>
-
 <h1 align="center">Vaibhav Kumar</h1>
 
 <p align="center">
-  Building intelligent systems and AI software at <strong>MECH</strong>.<br/>
-  Local LLMs &nbsp;·&nbsp; Computer Vision &nbsp;·&nbsp; Robotics &nbsp;·&nbsp; Desktop Software &nbsp;·&nbsp; Autonomous Systems
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=650&lines=AI+%26+Robotics+Engineer;Founder+%40+MECH;Building+Mio+%E2%80%94+AI+Companion;Local+LLM+%7C+Computer+Vision;Learning+Rust+%26+ROS2;Code+%E2%86%92+Hardware" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -25,6 +22,14 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=brovk2008&style=flat-square&color=58a6ff&label=Profile+Views" alt="Profile Views"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Focus-AI+%26+Robotics-a371f7?style=flat-square" alt="Focus"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Company-MECH-58a6ff?style=flat-square" alt="MECH"/>
+</p>
+
 ---
 
 ## About
@@ -33,14 +38,14 @@ I'm building MECH — an AI and robotics startup. Day to day: training language 
 
 The technical direction is toward systems where AI reasoning connects directly to physical actuation. Companion AI, B2B SaaS, and desktop tools are the near-term products. Autonomous hardware is where the work is heading.
 
-Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation dataset, and Reception, an AI receptionist platform. Learning Rust and ROS2 for the infrastructure and robotics work ahead.
+Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation dataset, and Reception, an AI receptionist platform for offices. Learning Rust and ROS2 for the infrastructure and robotics work ahead.
 
 ---
 
 ## MECH
 
 <p align="center">
-  <em>An AI &amp; Robotics startup. Every product contributes to a single long-term ecosystem — software intelligence connected to physical hardware, where each layer makes the next one possible.</em>
+  <em>An AI &amp; Robotics startup. Every product contributes to a single long-term ecosystem —<br/>software intelligence connected to physical hardware, where each layer makes the next one possible.</em>
 </p>
 
 <br/>
@@ -49,12 +54,12 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 
 | Product | Category | What it solves | Status |
 |:--------|:---------|:---------------|:------:|
-| **Mio** | AI Companion | Conversational AI that builds genuine long-term context. Fine-tuned on 1M+ conversation pairs, local LLM, no cloud dependency | `Active` |
-| **Reception** | B2B SaaS | AI receptionist for offices — visitor management, appointment scheduling, natural conversation. India and international markets | `Active` |
+| **Mio** | AI Companion | Conversational AI with genuine long-term context. Fine-tuned on 1M+ conversation pairs, local LLM, no cloud dependency | `Active` |
+| **Reception** | B2B SaaS | AI receptionist — visitor management, appointment scheduling, natural conversation. India and international markets | `Active` |
 | **AetherXD** | Desktop Platform | Local agent runtime and automation shell. AI on your machine, not routed through the cloud | `Active` |
 | **Revolver D** | Content Pipeline | AI-assisted video production and design automation. Reduces iteration time for independent creators | `Active` |
-| **DocaMech** | Utility | Automatic file organizer. Monitors a folder, auto-sorts by file type, ships as a licensed Windows application with installer | `Prototype` |
-| **Doraemon** | Personal AI | Persistent memory, task automation, and system control. The infrastructure layer behind an AI that genuinely knows you — not a session-based chatbot | `Planned` |
+| **DocaMech** | Utility | Automatic file organizer. Monitors Downloads, auto-sorts by type, ships as a licensed Windows application | `Prototype` |
+| **Doraemon** | Personal AI | Persistent memory, task automation, system control. Infrastructure for an AI that genuinely knows you | `Planned` |
 
 <br/>
 
@@ -63,10 +68,10 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 | System | Description | Horizon |
 |:-------|:------------|:-------:|
 | **Robot Arm** | AI-controlled mechanical actuation driven by the MECH software stack | `Future` |
-| **MECH Core** | Shared IoT firmware platform: Tank Level Checker · Auto Motor Controller · Leak Detector · Environment Monitor — one codebase across products | `Planned` |
+| **MECH Core** | Shared IoT firmware: Tank Level Checker · Auto Motor Controller · Leak Detector · Environment Monitor | `Planned` |
 | **Rail System** | Automated workspace equipment transport via rail-mounted actuators | `Future` |
 | **Smart Projector** | AI-driven dynamic information surfaces in physical space | `Concept` |
-| **VR Workspace** | Spatial AI environment — productivity tooling embedded in an immersive workspace | `Concept` |
+| **VR Workspace** | Spatial AI environment — productivity tooling in an immersive workspace | `Concept` |
 
 ---
 
@@ -88,8 +93,8 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 | Subject | Why |
 |:--------|:----|
 | **Rust** | Systems programming for performance-critical MECH components and embedded targets |
-| **ROS2** | Robotics middleware — the foundation for integrating the MECH hardware stack |
-| **Deep Learning** | Formal study via fast.ai, deeplearning.ai, and implementing architectures from scratch |
+| **ROS2** | Robotics middleware — foundation for integrating the MECH hardware stack |
+| **Deep Learning** | Formal study via fast.ai, deeplearning.ai, and building architectures from scratch |
 | **Autonomous Systems** | SLAM, motion planning, sensor fusion, and control theory |
 | **Embedded Systems** | Low-level hardware programming toward the MECH IoT platform |
 
@@ -110,7 +115,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Languages**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,ts,js,cpp,cs,rust" alt="Languages" />
+  <img src="https://skillicons.dev/icons?i=python,ts,js,cpp,cs,rust" alt="Languages"/>
 </p>
 <sub>Python &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; C++ &nbsp;·&nbsp; C# &nbsp;·&nbsp; Rust <em>(learning)</em></sub>
 
@@ -119,7 +124,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **AI / ML**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" alt="AI/ML" />
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" alt="AI/ML"/>
 </p>
 <sub>PyTorch &nbsp;·&nbsp; TensorFlow &nbsp;·&nbsp; Hugging Face Transformers &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; Ollama &nbsp;·&nbsp; LoRA fine-tuning &nbsp;·&nbsp; RAG pipelines &nbsp;·&nbsp; local LLM deployment &nbsp;·&nbsp; model quantization &nbsp;·&nbsp; Gemini API &nbsp;·&nbsp; OpenAI API</sub>
 
@@ -128,7 +133,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Computer Vision**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=opencv" alt="Computer Vision" />
+  <img src="https://skillicons.dev/icons?i=opencv" alt="Computer Vision"/>
 </p>
 <sub>OpenCV &nbsp;·&nbsp; MediaPipe &nbsp;·&nbsp; pose estimation &nbsp;·&nbsp; hand tracking &nbsp;·&nbsp; real-time detection &nbsp;·&nbsp; Flask model serving</sub>
 
@@ -137,7 +142,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Backend**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=fastapi,flask,nodejs,express" alt="Backend" />
+  <img src="https://skillicons.dev/icons?i=fastapi,flask,nodejs,express" alt="Backend"/>
 </p>
 
 <br/>
@@ -145,7 +150,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Frontend**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,html,css,tailwindcss" alt="Frontend" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,html,css,tailwindcss" alt="Frontend"/>
 </p>
 
 <br/>
@@ -153,7 +158,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Desktop**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=electron,tauri" alt="Desktop" />
+  <img src="https://skillicons.dev/icons?i=electron,tauri" alt="Desktop"/>
 </p>
 
 <br/>
@@ -161,7 +166,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **3D & Simulation**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=unity,godot,blender" alt="3D and Simulation" />
+  <img src="https://skillicons.dev/icons?i=unity,godot,blender" alt="3D and Simulation"/>
 </p>
 
 <br/>
@@ -169,7 +174,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Infrastructure**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,git,linux,vercel,aws,githubactions" alt="Infrastructure" />
+  <img src="https://skillicons.dev/icons?i=docker,git,linux,vercel,aws,githubactions" alt="Infrastructure"/>
 </p>
 
 <br/>
@@ -177,7 +182,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Databases**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=postgres,sqlite,mongodb,redis" alt="Databases" />
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,mongodb,redis" alt="Databases"/>
 </p>
 
 <br/>
@@ -185,7 +190,7 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 **Hardware & Embedded**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=arduino,raspberrypi" alt="Hardware" />
+  <img src="https://skillicons.dev/icons?i=arduino,raspberrypi" alt="Hardware"/>
 </p>
 <sub>Arduino &nbsp;·&nbsp; Raspberry Pi &nbsp;·&nbsp; ROS <em>(concepts)</em> &nbsp;·&nbsp; ROS2 <em>(learning)</em> &nbsp;·&nbsp; sensor integration &nbsp;·&nbsp; embedded control</sub>
 
@@ -212,42 +217,42 @@ Currently focused on Mio, an AI companion fine-tuned on a 1M+ conversation datas
 `RAG-for-IBM` &nbsp;—&nbsp; Retrieval-augmented generation pipeline for document Q&A. Built under competition constraints.
 [→ View](https://github.com/brovk2008/RAG-for-IBM) &nbsp;·&nbsp; LangChain · embeddings · vector search
 
-`Basic_ai_from_scratch` &nbsp;—&nbsp; Core deep learning primitives implemented without frameworks. Forward pass, backpropagation, loss functions — no abstraction layers. Study project running alongside formal Deep Learning Specialization coursework.
+`Basic_ai_from_scratch` &nbsp;—&nbsp; Core deep learning primitives without frameworks — forward pass, backpropagation, loss functions. Study project running alongside formal Deep Learning coursework.
 [→ View](https://github.com/brovk2008/Basic_ai_from_scratch) &nbsp;·&nbsp; Python · NumPy
 
 <br/>
 
 **Dataset Engineering**
 
-`Dataset Toolkit` &nbsp;—&nbsp; Internal pipeline for cleaning, normalizing, and structuring large text corpora at scale. Handles 1M+ row datasets. Became the backbone of Mio's training data preparation — subtitle cleaning, CSV repair, language filtering, JSON conversion, and batch text normalization.
+`Dataset Toolkit` &nbsp;—&nbsp; Internal pipeline for cleaning, normalizing, and structuring large text corpora at scale. Handles 1M+ row datasets. Became the backbone of Mio's training data — subtitle cleaning, CSV repair, language filtering, JSON conversion, batch text normalization.
 Private &nbsp;·&nbsp; Pandas · Python · multiprocessing
 
 <br/>
 
 **Robotics & Embedded**
 
-`Robotics & Embedded R&D` &nbsp;—&nbsp; Experiments in embedded control, sensor integration, ROS architecture, and Unity-based simulation. Foundation work for the MECH hardware roadmap — these are not finished products, they are learning infrastructure.
+`Robotics & Embedded R&D` &nbsp;—&nbsp; Experiments in embedded control, sensor integration, ROS architecture, and Unity-based simulation. Foundation work for the MECH hardware roadmap.
 Arduino · Raspberry Pi · ROS · Unity
 
 <br/>
 
 **Local LLM Lab**
 
-Benchmarking environment for Qwen, Mistral, Zephyr, Gemini, and Ollama-hosted models. Evaluates RAM footprint, inference speed, and output quality to make integration decisions across MECH products. Ongoing rather than a single repository.
+Benchmarking environment for Qwen, Mistral, Zephyr, Gemini, and Ollama-hosted models. Evaluates RAM footprint, inference speed, and output quality to make integration decisions across MECH products.
 Ollama · Hugging Face · quantization testing
 
 <br/>
 
 **VTuber / AI Avatar Research**
 
-Real-time avatar pipeline: VRM model → VSeeFace → MediaPipe body and hand tracking → OBS output. Research into AI-driven character animation and streaming presence. Exploring intersection of real-time pose capture and generative AI.
+Real-time avatar pipeline: VRM model → VSeeFace → MediaPipe body tracking → OBS output. Research into AI-driven character animation and streaming presence.
 VRM · VSeeFace · MediaPipe · Unity · Blender
 
 <br/>
 
 **Applied & Shipped**
 
-`Project-sentinal` &nbsp;—&nbsp; Full-stack crime pattern analysis platform. Crime heatmaps, AI assistant, pattern detection, Docker deployment. Built for the H2S datathon.
+`Project-sentinal` &nbsp;—&nbsp; Full-stack crime pattern analysis platform. Crime heatmaps, AI assistant, Docker deployment. Built for the H2S datathon.
 [→ View](https://github.com/brovk2008/Project-sentinal) &nbsp;·&nbsp; FastAPI · React · Docker
 
 `mindmendor` &nbsp;—&nbsp; Mental health assistant chatbot.
@@ -264,11 +269,11 @@ VRM · VSeeFace · MediaPipe · Unity · Blender
 
 **Embodied AI** &nbsp;—&nbsp; The gap between a model that reasons well and a robot that acts correctly is still enormous. I'm interested in the perception-to-action pipeline: how a system observes the world, builds a representation, and executes physical decisions reliably.
 
-**Human-AI Interaction** &nbsp;—&nbsp; Most AI products reset context between sessions. Mio is an early attempt to build something different — a companion system that accumulates history, maintains consistency, and becomes more useful over time rather than starting fresh each conversation.
+**Human-AI Interaction** &nbsp;—&nbsp; Most AI products reset context between sessions. Mio is an early attempt to build something different — a companion that accumulates history, maintains consistency, and becomes more useful over time rather than starting fresh each conversation.
 
-**Autonomous Navigation** &nbsp;—&nbsp; SLAM, sensor fusion, and motion planning are the technical foundation for anything MECH builds that moves. I'm working through these areas systematically as part of the ROS2 and robotics learning track.
+**Autonomous Navigation** &nbsp;—&nbsp; SLAM, sensor fusion, and motion planning are the technical foundation for anything MECH builds that moves. Working through these systematically as part of the ROS2 and robotics learning track.
 
-**Agent Architectures** &nbsp;—&nbsp; How do you build a system where multiple specialized agents coordinate over shared state without becoming brittle? AetherXD explores this at the desktop level. The same problems appear at much larger scale in robotics.
+**Agent Architectures** &nbsp;—&nbsp; How do you build a system where multiple specialized agents coordinate over shared state without becoming brittle? AetherXD explores this at the desktop level.
 
 **Embedded Intelligence** &nbsp;—&nbsp; Running capable inference on constrained hardware without a cloud fallback. Central to making MECH IoT and hardware products viable as standalone devices.
 
@@ -306,26 +311,36 @@ timeline
 
 <div align="center">
 
-  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=brovk2008&theme=github_dark" alt="Stats"/>
+  <!-- Trophies -->
+  <img src="https://github-profile-trophy.vercel.app/?username=brovk2008&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=4&margin-h=4" alt="Trophies" width="100%"/>
+
+  <br/><br/>
+
+  <!-- Stats + Streak side by side -->
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=brovk2008&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" alt="GitHub Stats"/>
   &nbsp;
-  <img height="175" src="https://streak-stats.demolab.com/?user=brovk2008&theme=github_dark&hide_border=true" alt="Streak"/>
+  <img height="180" src="https://streak-stats.demolab.com/?user=brovk2008&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
 
   <br/><br/>
 
-  <img width="96%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=brovk2008&theme=github_dark" alt="Profile details"/>
+  <!-- Profile details full width -->
+  <img width="96%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=brovk2008&theme=github_dark" alt="Profile Details"/>
 
   <br/><br/>
 
-  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=brovk2008&theme=github_dark" alt="Top languages by commit"/>
+  <!-- Languages side by side -->
+  <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=brovk2008&theme=github_dark" alt="Top Languages by Commit"/>
   &nbsp;
-  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=brovk2008&theme=github_dark" alt="Top languages by repo"/>
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=brovk2008&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" alt="Top Languages"/>
 
   <br/><br/>
 
-  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=brovk2008&bg_color=0d1117&color=8b949e&line=58a6ff&point=58a6ff&area=true&area_color=21262d&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution activity"/>
+  <!-- Activity graph tokyonight colors -->
+  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=brovk2008&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae&area=true&area_color=bf91f3&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution Activity"/>
 
   <br/><br/>
 
+  <!-- Snake animation — runs from output branch via GitHub Actions (see .github/workflows/snake.yml) -->
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -344,8 +359,6 @@ timeline
 
 </div>
 
-> **Snake setup:** add the workflow below at `.github/workflows/snake.yml` in your profile repo and push. GitHub Actions will auto-generate the animation and commit it to the `output` branch. The snake runs on your real contribution graph, eating each square as it moves.
-
 ---
 
 ## Collaboration
@@ -363,7 +376,11 @@ Open to working with people who are specific about what they're building and why
 
 <br/>
 
-[![Contact via GitHub Issues](https://img.shields.io/badge/Contact-Open%20an%20Issue-238636?style=flat-square&logo=github&logoColor=white)](https://github.com/brovk2008/brovk2008/issues/new)
+<p align="center">
+  <a href="https://github.com/brovk2008/brovk2008/issues/new">
+    <img src="https://img.shields.io/badge/Contact-Open%20an%20Issue-238636?style=for-the-badge&logo=github&logoColor=white" alt="Contact"/>
+  </a>
+</p>
 
 ---
 
@@ -378,3 +395,7 @@ Open to working with people who are specific about what they're building and why
   <br/><br/>
   <sub>Building MECH — one system at a time.</sub>
 </div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:a371f7,100:58a6ff&height=120&section=footer&reversal=false" width="100%" alt="Footer"/>
