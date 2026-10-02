@@ -105,7 +105,7 @@ As founder of **MECH**, every software utility, companion runtime, and hardware 
 <p>
   <img src="https://skillicons.dev/icons?i=python,c,cpp,ts,js,rust,go,java,bash" alt="Languages"/>
 </p>
-<sub>Python &nbsp;·&nbsp; C &nbsp;·&nbsp; C++ &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; Rust <em>(systems)</em> &nbsp;·&nbsp; Go &nbsp;·&nbsp; Java &nbsp;·&nbsp; Bash / Shell</sub>
+<sub><strong>Languages:</strong> Python · C · C++ · TypeScript · JavaScript · Rust <em>(systems &amp; high performance)</em> · Go · Java · Bash / Shell</sub>
 
 <br/><br/>
 
@@ -113,16 +113,16 @@ As founder of **MECH**, every software utility, companion runtime, and hardware 
 <p>
   <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" alt="AI Frameworks"/>
 </p>
-<sub><strong>Core:</strong> PyTorch · Transformers · PEFT · LoRA fine-tuning · TRL · bitsandbytes quantization · RAG pipelines · Vector embeddings · Sentence Transformers</sub><br/>
-<sub><strong>Local Inference:</strong> Ollama · LLaMA · Qwen / Qwen 2.5 · Mistral · Zephyr · SFTTrainer · AutoTokenizer · compressed embeddings</sub>
+<sub><strong>Model Engineering:</strong> PyTorch · Transformers · PEFT · LoRA fine-tuning · TRL · SFTTrainer · bitsandbytes quantization (4-bit/8-bit) · RAG pipelines · Vector embeddings · Sentence Transformers</sub><br/>
+<sub><strong>Local Edge Deployment:</strong> Ollama · LLaMA · Qwen 2.5 · Mistral · Zephyr · GPT-2 · AutoTokenizer · compressed embeddings · local model serving</sub>
 
 <br/><br/>
 
-### 👓 Computer Vision &amp; Spatial Tracking
+### 👓 Computer Vision &amp; Spatial Perception
 <p>
   <img src="https://skillicons.dev/icons?i=opencv" alt="Computer Vision"/>
 </p>
-<sub>OpenCV · MediaPipe (pose, hand, face, body tracking) · real-time camera pipelines · smart-goggles edge processing · VRM &amp; VSeeFace avatar streaming</sub>
+<sub><strong>Perception:</strong> OpenCV · MediaPipe (pose estimation, hand tracking, face tracking, body tracking) · real-time camera pipelines · smart-goggles edge processing · VRM avatars · VSeeFace · OBS streaming integration</sub>
 
 <br/><br/>
 
@@ -130,59 +130,58 @@ As founder of **MECH**, every software utility, companion runtime, and hardware 
 <p>
   <img src="https://skillicons.dev/icons?i=arduino,raspberrypi" alt="Microcontrollers"/>
 </p>
-<sub>ESP32 · ESP32-C3 · STM32 · Arduino · GPIO · UART · I²C · SPI · sensors · servos · linear actuators · solenoid valves · motor drivers · Li-ion power regulation</sub>
+<sub><strong>Embedded Stack:</strong> ESP32 · ESP32-C3 · STM32 · Arduino · GPIO · UART · I²C · SPI · OLED displays · pressure sensors · pumps · solenoid valves · motor drivers · servos · linear actuators · Li-ion battery power regulation · buck converters</sub>
 
 <br/><br/>
 
 ### ⚡ PCB Design &amp; Electronics
 <p>
-  <img src="https://img.shields.io/badge/KiCad-PCB_Design-262a33?style=for-the-badge&logo=kicad&logoColor=38bdf8" alt="KiCad"/>
-  <img src="https://img.shields.io/badge/KiCad_MCP-AI_Protobuf-0b132b?style=for-the-badge&logo=circuitverse&logoColor=c084fc" alt="KiCad MCP"/>
+  <img src="https://img.shields.io/badge/KiCad_8-PCB_Design-262a33?style=for-the-badge&logo=kicad&logoColor=38bdf8" alt="KiCad"/>
+  <img src="https://img.shields.io/badge/KiCad_MCP-AI_Protobuf_Engine-0b132b?style=for-the-badge&logo=circuitverse&logoColor=c084fc" alt="KiCad MCP"/>
 </p>
-<sub>KiCad 8 · schematic capture · multi-layer PCB routing · BOM optimization · power circuits · motor controllers · custom micro-boards · Model Context Protocol (MCP) server integration</sub>
+<sub><strong>Electronics:</strong> KiCad 8 · schematic capture · multi-layer PCB routing · BOM generation · circuit design &amp; hardware debugging · motor-driver integration · power-management circuits · <strong>Model Context Protocol (MCP) server development</strong> with dynamic Protocol Buffers for AI circuit analysis</sub>
 
 <br/><br/>
 
 ### 🦾 Robotics &amp; Actuation Loops
 <p>
-  <img src="https://img.shields.io/badge/ROS2-Middleware-223147?style=for-the-badge&logo=ros&logoColor=white" alt="ROS2"/>
-  <img src="https://img.shields.io/badge/Gazebo-Simulation-0b132b?style=for-the-badge&logo=gazebo&logoColor=38bdf8" alt="Gazebo"/>
+  <img src="https://img.shields.io/badge/ROS2-Robotics_Middleware-223147?style=for-the-badge&logo=ros&logoColor=white" alt="ROS2"/>
+  <img src="https://img.shields.io/badge/Gazebo-Physics_Simulation-0b132b?style=for-the-badge&logo=gazebo&logoColor=38bdf8" alt="Gazebo"/>
 </p>
-<sub>ROS / ROS2 · Gazebo · motor control · kinematics · UDP localhost robotics streaming · embedded control loops · Unity/Godot spatial simulation</sub>
+<sub><strong>Robotics:</strong> ROS &amp; ROS2 · Gazebo · kinematics &amp; actuator control · UDP localhost low-latency networking · closed-loop sensor-actuator pipelines · Unity &amp; Godot robotic simulation</sub>
 
 <br/><br/>
 
-### 🧊 CAD, 3D &amp; Rapid Fabrication
+### 🧊 CAD, 3D Modeling &amp; Rapid Fabrication
 <p>
   <img src="https://skillicons.dev/icons?i=blender,unity,godot" alt="3D & CAD"/>
 </p>
-<sub>Autodesk Fusion 360 · FreeCAD · Blender 3D · 3D Printing (CAD → STL) · custom robotic chassis · rapid enclosure fabrication · VRM avatars</sub>
+<sub><strong>Design:</strong> Autodesk Fusion 360 · FreeCAD · Blender 3D · 3D Printing (CAD → STL slicing) · custom robotic chassis fabrication · rapid enclosure prototyping · VRM character rigging</sub>
 
 <br/><br/>
 
-### 🌐 Full-Stack &amp; Geospatial
+### 🌐 Full-Stack &amp; Geospatial Engineering
 <p>
   <img src="https://skillicons.dev/icons?i=react,vite,fastapi,postgres,supabase" alt="Full Stack"/>
 </p>
-<sub>React · Vite · TypeScript · FastAPI · Python REST APIs · PostgreSQL · PostGIS (spatial indexing, KML, shapefiles, crime heatmaps) · Supabase</sub>
+<sub><strong>Web &amp; Spatial:</strong> React · Vite · TypeScript · FastAPI · Python REST APIs · PostgreSQL · <strong>PostGIS</strong> (geospatial indexing, KML, shapefiles, police jurisdiction mapping, crime heatmaps) · Supabase · million-row dataset processing &amp; auditing</sub>
 
 <br/><br/>
 
-### ☁️ Cloud, PaaS &amp; DevOps
+### ☁️ Cloud Infrastructure, PaaS &amp; DevOps
 <p>
   <img src="https://skillicons.dev/icons?i=docker,aws,gcp,cloudflare,githubactions" alt="Cloud & DevOps"/>
 </p>
-<sub><strong>Platforms:</strong> Zoho Catalyst (AppSail, serverless, containerized runtimes) · AWS · GCP · Azure · Supabase · Vercel · Render</sub><br/>
-<sub><strong>Infrastructure:</strong> Docker · Docker Compose · Kubernetes · Cloudflare Tunnel · Linux (Ubuntu, Arch, Parrot OS) · WSL</sub>
+<sub><strong>Cloud &amp; Deployment:</strong> Zoho Catalyst (AppSail, serverless, containerized deployment, Python environments) · AWS · GCP · Azure · Supabase · Vercel · Render · Cloudflare &amp; Cloudflare Tunnel · Docker · Docker Compose · Kubernetes · Linux (Ubuntu, Arch, Parrot OS) · WSL</sub>
 
 <br/><br/>
 
-### 📦 Developer Tools &amp; Packaging
+### 📦 Developer Tools &amp; Package Publishing
 <p>
-  <img src="https://img.shields.io/badge/PyPI-DABOOK-3775a9?style=for-the-badge&logo=pypi&logoColor=white" alt="DABOOK"/>
+  <img src="https://img.shields.io/badge/PyPI-DABOOK_Package-3775a9?style=for-the-badge&logo=pypi&logoColor=white" alt="DABOOK"/>
   <img src="https://img.shields.io/badge/MCP-KiCad_Server-1e293b?style=for-the-badge&logo=anthropic&logoColor=38bdf8" alt="MCP"/>
 </p>
-<sub>Published PyPI package <strong>DABOOK</strong> · KiCad Model Context Protocol (MCP) server · Protocol Buffers (protobuf) · PyInstaller · Inno Setup · GitHub Actions CI/CD</sub>
+<sub><strong>Tooling:</strong> Published PyPI package <strong>DABOOK</strong> · Model Context Protocol (MCP) server development · dynamic protobuf descriptor pools · PyInstaller executable packaging · Inno Setup Windows installers · GitHub Actions CI/CD</sub>
 
 <br clear="both"/>
 
@@ -290,11 +289,6 @@ As founder of **MECH**, every software utility, companion runtime, and hardware 
 
 <div align="center">
 
-  <!-- Trophies -->
-  <img src="https://github-profile-trophy.vercel.app/?username=brovk2008&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=4&margin-h=4" alt="Trophies" width="100%"/>
-
-  <br/><br/>
-
   <!-- Stats & Streak Side by Side -->
   <img height="180" src="https://github-readme-stats.vercel.app/api?username=brovk2008&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=38bdf8&text_color=e0f2fe&icon_color=c084fc&bg_color=091024" alt="GitHub Stats"/>
   &nbsp;
@@ -309,12 +303,7 @@ As founder of **MECH**, every software utility, companion runtime, and hardware 
 
   <br/><br/>
 
-  <!-- Contribution Activity Graph -->
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=brovk2008&bg_color=091024&color=38bdf8&line=c084fc&point=7dd3fc&area=true&area_color=38bdf8&hide_border=true&custom_title=Celestial%20Contribution%20Activity" alt="Contribution Activity"/>
-
-  <br/><br/>
-
-  <!-- Shorekeeper Butterfly & Crystal Contribution Grid -->
+  <!-- Real GitHub Calendar Shorekeeper Butterfly & Crystal Contribution Grid -->
   <img
     src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/contribution-crystals.svg"
     alt="Shorekeeper Butterfly &amp; Crystal Contribution Grid"
