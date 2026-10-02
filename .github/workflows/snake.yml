@@ -1,4 +1,4 @@
-name: Generate Contribution Snake
+name: Refresh Shorekeeper Butterfly Contribution Grid
 
 on:
   schedule:
@@ -14,18 +14,22 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Generate snake SVGs
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#a371f7
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          target_branch: output
-          build_dir: dist
+          python-version: "3.11"
+
+      - name: Generate Butterfly Crystal Grid
+        run: python generate_butterfly_contribution.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/contribution-crystals.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update butterfly contribution crystals [skip ci]" && git push origin main)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

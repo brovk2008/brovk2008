@@ -48,30 +48,19 @@
 
 ## 🌌 The Shorekeeper Directive
 
-<table border="0" width="100%">
-  <tr>
-    <td width="64%" valign="top">
-      <p>
-        I bridge the chasm between <strong>pure software reasoning</strong> and <strong>physical robotics actuation</strong>.
-      </p>
-      <p>
-        Most AI systems remain trapped behind browser windows and cloud APIs. My work connects high-order cognitive models directly into motors, cameras, custom PCBs, and mechanical frames. Day to day: fine-tuning LLMs on 1M+ conversation pairs, designing custom circuits in KiCad, building real-time computer vision pipelines, and engineering embedded firmware for autonomous systems.
-      </p>
-      <p>
-        As founder of <strong>MECH</strong>, every software utility, companion runtime, and hardware prototype feeds into a single long-term horizon: <em>embodied intelligence that inhabits and impacts physical reality.</em>
-      </p>
-      <br/>
-      <p>
-        💠 <strong>Flagship Focus:</strong> Mio (Embodied Companion AI) · Reception (B2B Enterprise AI) · KiCad MCP<br/>
-        💠 <strong>Hardware Track:</strong> Custom ESP32 PCBs · Wearable Smart Goggles · ROS2 Actuation<br/>
-        💠 <strong>Crucible:</strong> 46 Hackathons fought under extreme constraints · 14 National &amp; International Wins
-      </p>
-    </td>
-    <td width="36%" align="center" valign="middle">
-      <img src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/shorekeeper-pose1.png" width="90%" alt="Shorekeeper"/>
-    </td>
-  </tr>
-</table>
+<img align="right" width="310" src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/shorekeeper-pose1.png" alt="Shorekeeper" style="margin-left: 24px; margin-bottom: 24px; max-width: 40%;" />
+
+I bridge the chasm between **pure software reasoning** and **physical robotics actuation**.
+
+Most AI systems remain trapped behind browser windows and cloud APIs. My work connects high-order cognitive models directly into motors, cameras, custom PCBs, and mechanical frames. Day to day: fine-tuning LLMs on 1M+ conversation pairs, designing custom circuits in KiCad, building real-time computer vision pipelines, and engineering embedded firmware for autonomous systems.
+
+As founder of **MECH**, every software utility, companion runtime, and hardware prototype feeds into a single long-term horizon: *embodied intelligence that inhabits and impacts physical reality.*
+
+- 💠 **Flagship Focus:** Mio (Embodied Companion AI) · Reception (B2B Enterprise AI) · KiCad MCP
+- 💠 **Hardware Track:** Custom ESP32 PCBs · Wearable Smart Goggles · ROS2 Actuation
+- 💠 **The Crucible:** 46 Hackathons fought under extreme constraints · 14 National &amp; International Wins
+
+<br clear="both"/>
 
 ---
 
@@ -110,12 +99,7 @@
 
 ## 💠 Technology Constellation
 
-<table border="0" width="100%">
-  <tr>
-    <td width="36%" align="center" valign="middle">
-      <img src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/shorekeeper-pose2.png" width="95%" alt="Shorekeeper Celestial"/>
-    </td>
-    <td width="64%" valign="top">
+<img align="left" width="280" src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/shorekeeper-pose2.png" alt="Shorekeeper Celestial" style="margin-right: 28px; margin-bottom: 28px; max-width: 38%;" />
 
 ### 💻 Core &amp; Systems Languages
 <p>
@@ -148,13 +132,7 @@
 </p>
 <sub>ESP32 · ESP32-C3 · STM32 · Arduino · GPIO · UART · I²C · SPI · sensors · servos · linear actuators · solenoid valves · motor drivers · Li-ion power regulation</sub>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td width="50%" valign="top">
+<br/><br/>
 
 ### ⚡ PCB Design &amp; Electronics
 <p>
@@ -180,8 +158,7 @@
 </p>
 <sub>Autodesk Fusion 360 · FreeCAD · Blender 3D · 3D Printing (CAD → STL) · custom robotic chassis · rapid enclosure fabrication · VRM avatars</sub>
 
-    </td>
-    <td width="50%" valign="top">
+<br/><br/>
 
 ### 🌐 Full-Stack &amp; Geospatial
 <p>
@@ -207,9 +184,7 @@
 </p>
 <sub>Published PyPI package <strong>DABOOK</strong> · KiCad Model Context Protocol (MCP) server · Protocol Buffers (protobuf) · PyInstaller · Inno Setup · GitHub Actions CI/CD</sub>
 
-    </td>
-  </tr>
-</table>
+<br clear="both"/>
 
 ---
 
@@ -252,90 +227,48 @@
 
 ## 🚀 Flagship Projects
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🚨 Project Sentinel</h3>
-      <p>
-        Full-stack crime pattern analysis and geospatial intelligence suite engineered for the <strong>Karnataka State Police</strong> during the H2S Datathon.
-      </p>
-      <p>
-        Features spatial clustering, police jurisdiction boundary mapping, interactive crime heatmaps, and an integrated AI analysis assistant.
-      </p>
-      <p>
-        <a href="https://github.com/brovk2008/Project-sentinal"><strong>Explore Repository →</strong></a><br/>
-        <sub>FastAPI · React · PostGIS · PostgreSQL · Docker · KML / Shapefiles</sub>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🤖 Mio — AI Companion</h3>
-      <p>
-        Embodied conversational agent fine-tuned on a custom curated corpus of over <strong>1,000,000 conversation pairs</strong>.
-      </p>
-      <p>
-        Engineered specifically for local edge inference without cloud telemetry, persistent conversational memory, and future integration into physical robotic bodies.
-      </p>
-      <p>
-        <a href="https://github.com/brovk2008"><strong>MECH Core R&amp;D →</strong></a><br/>
-        <sub>PyTorch · PEFT / LoRA · Ollama · Transformers · SFTTrainer · Local Quantization</sub>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>⚡ KiCad MCP Server</h3>
-      <p>
-        Model Context Protocol server connecting AI assistants directly into <strong>KiCad EDA</strong>.
-      </p>
-      <p>
-        Implements dynamic Protocol Buffer (protobuf) descriptors, dynamic tool injection, and schema reflection, allowing LLM agents to audit circuits and route boards autonomously.
-      </p>
-      <p>
-        <a href="https://github.com/brovk2008"><strong>Hardware &amp; AI Stack →</strong></a><br/>
-        <sub>Python · KiCad · Model Context Protocol · Protobuf · AI Tooling</sub>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📦 DABOOK (PyPI)</h3>
-      <p>
-        Official Python package published to the <strong>Python Package Index (PyPI)</strong> providing developer productivity utilities, batch processing, and pipeline automation.
-      </p>
-      <p>
-        Designed for modular integration into data preprocessing workflows.
-      </p>
-      <p>
-        <a href="https://pypi.org/user/brovk2008/"><strong>View on PyPI →</strong></a><br/>
-        <sub>Python · PyPI · Packaging · CLI · Automation</sub>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>👓 Wearable Smart Goggles</h3>
-      <p>
-        Physical wearable prototype merging real-time computer vision, low-power embedded microcontrollers, and lightweight optics.
-      </p>
-      <p>
-        Processes field-of-view object identification, face/pose tracking, and ambient notifications.
-      </p>
-      <p>
-        <sub>ESP32-C3 · OpenCV · MediaPipe · OLED Display · 3D Printed Chassis</sub>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🪑 PosChair</h3>
-      <p>
-        IoT smart chair equipped with embedded tactile pressure arrays that continuously classify seating posture and provide proactive ergonomic corrections.
-      </p>
-      <p>
-        Built and awarded across hackathon arenas.
-      </p>
-      <p>
-        <sub>ESP32 · Pressure Sensor Grid · Real-time Telemetry · BLE / Wi-Fi</sub>
-      </p>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/shorekeeper-wide.png" width="100%" alt="Shorekeeper Banner"/>
+</div>
+
+<br/>
+
+### 🚨 Project Sentinel
+> Full-stack crime pattern analysis and geospatial intelligence suite engineered for the **Karnataka State Police** during the H2S Datathon.
+- Features spatial clustering, police jurisdiction boundary mapping, interactive crime heatmaps, and an integrated AI analysis assistant.
+- **Tech Stack:** FastAPI · React · PostGIS · PostgreSQL · Docker · KML / Shapefiles  
+- [→ Explore Sentinel Repository](https://github.com/brovk2008/Project-sentinal)
+
+<br/>
+
+### 🤖 Mio — Embodied AI Companion
+> Conversational agent fine-tuned on a custom curated corpus of over **1,000,000 conversation pairs**.
+- Engineered specifically for local edge inference without cloud telemetry, persistent conversational memory, and future integration into physical robotic bodies.
+- **Tech Stack:** PyTorch · PEFT / LoRA · Ollama · Transformers · SFTTrainer · Local Quantization  
+- [→ Explore MECH Core R&amp;D](https://github.com/brovk2008)
+
+<br/>
+
+### ⚡ KiCad MCP Server
+> Model Context Protocol server connecting AI assistants directly into **KiCad EDA**.
+- Implements dynamic Protocol Buffer (protobuf) descriptors, dynamic tool injection, and schema reflection, allowing LLM agents to audit circuits and route boards autonomously.
+- **Tech Stack:** Python · KiCad · Model Context Protocol · Protobuf · AI Tooling  
+- [→ Explore Hardware &amp; AI Stack](https://github.com/brovk2008)
+
+<br/>
+
+### 📦 DABOOK (PyPI)
+> Official Python package published to the **Python Package Index (PyPI)** providing developer productivity utilities, batch processing, and pipeline automation.
+- Designed for modular integration into data preprocessing workflows.
+- **Tech Stack:** Python · PyPI · Packaging · CLI · Automation  
+- [→ View DABOOK on PyPI](https://pypi.org/user/brovk2008/)
+
+<br/>
+
+### 👓 Wearable Smart Goggles &amp; 🪑 PosChair
+> Physical wearable and IoT hardware prototypes combining real-time computer vision, low-power embedded microcontrollers, and lightweight optics.
+- **Smart Goggles:** ESP32-C3 · OpenCV · MediaPipe · OLED Display · 3D Printed Chassis
+- **PosChair:** IoT smart chair equipped with embedded tactile pressure arrays that continuously classify seating posture and provide proactive ergonomic corrections.
 
 ---
 
@@ -350,11 +283,6 @@
 </p>
 
 > *"46 hackathons taught me one indelible truth: ideas are cheap; executing an end-to-end working system from scratch in 36 hours is the ultimate crucible."*
-
-- 🥇 **Project Sentinel** — H2S Datathon (Crime Analytics &amp; Spatial Law Enforcement Suite)
-- 🥇 **IgniteGap** — Hackathon Winner for Civic &amp; Educational Innovation
-- 🥇 **PosChair** — Embedded Hardware &amp; Ergonomics Winner
-- 🏆 **11 Additional Recognitions** spanning AI Agent Frameworks, Real-time CV, and Robotics
 
 ---
 
@@ -386,22 +314,12 @@
 
   <br/><br/>
 
-  <!-- Contribution Grid Snake -->
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/brovk2008/brovk2008/output/github-contribution-grid-snake-dark.svg"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/brovk2008/brovk2008/output/github-contribution-grid-snake.svg"
-    />
-    <img
-      alt="Contribution snake"
-      src="https://raw.githubusercontent.com/brovk2008/brovk2008/output/github-contribution-grid-snake-dark.svg"
-      width="98%"
-    />
-  </picture>
+  <!-- Shorekeeper Butterfly & Crystal Contribution Grid -->
+  <img
+    src="https://raw.githubusercontent.com/brovk2008/brovk2008/main/assets/contribution-crystals.svg"
+    alt="Shorekeeper Butterfly &amp; Crystal Contribution Grid"
+    width="100%"
+  />
 
 </div>
 
