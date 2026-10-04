@@ -1,9 +1,12 @@
 import urllib.request
 import re
-from datetime import datetime
+from datetime import datetime, date, timedelta
 
 def generate_butterfly_grid():
-    url = 'https://github.com/users/brovk2008/contributions'
+    now = datetime.now()
+    current_year = now.year
+
+    url = f"https://github.com/users/brovk2008/contributions?from={current_year}-01-01&to={current_year}-12-31"
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     
     html = ""
@@ -11,12 +14,12 @@ def generate_butterfly_grid():
         with urllib.request.urlopen(req) as resp:
             html = resp.read().decode('utf-8')
     except Exception as e:
-        print("Failed to fetch from GitHub:", e)
+        print(f"Failed to fetch from GitHub for {current_year}:", e)
         return
 
-    # Extract total contribution count
-    total_contribs_match = re.search(r'([0-9,]+)\s+contributions\s+in\s+the\s+last\s+year', html, re.I)
-    total_contribs_str = total_contribs_match.group(1) if total_contribs_match else "1,356"
+    # Extract total contribution count for current year
+    total_contribs_match = re.search(r'([0-9,]+)\s+contributions', html, re.I)
+    total_contribs_str = total_contribs_match.group(1) if total_contribs_match else "1,345"
 
     # Extract all data-date and data-level
     pattern = re.compile(r'<td[^>]*data-date="([^"]+)"[^>]*data-level="([^"]+)"')
@@ -27,66 +30,62 @@ def generate_butterfly_grid():
         print("No contribution dates parsed!")
         return
 
-    sorted_dates = sorted(date_to_level.keys())
-    start_date = datetime.strptime(sorted_dates[0], "%Y-%m-%d").date()
-    end_date = datetime.strptime(sorted_dates[-1], "%Y-%m-%d").date()
+    # Set up full calendar year for current_year: Jan 1 to Dec 31
+    jan1 = date(current_year, 1, 1)
+    dec31 = date(current_year, 12, 31)
 
-    # Map dates to calendar weeks (0..52) and day of week (0=Sunday .. 6=Saturday)
-    # week_index = (d - start_date).days // 7
+    # First Sunday on or before Jan 1
+    days_back = (jan1.weekday() + 1) % 7 # Sunday = 0, Monday = 1 ... Saturday = 6
+    start_sunday = jan1 - timedelta(days=days_back)
+
+    # Map each day of the year into week index and day of week
     weeks = {}
-    for d_str, lvl in date_to_level.items():
-        d = datetime.strptime(d_str, "%Y-%m-%d").date()
-        w_day = (d.weekday() + 1) % 7 # Sunday = 0, Saturday = 6
-        w_idx = (d - start_date).days // 7
+    d = jan1
+    while d <= dec31:
+        w_day = (d.weekday() + 1) % 7
+        w_idx = (d - start_sunday).days // 7
+        d_str = d.strftime("%Y-%m-%d")
+        lvl = date_to_level.get(d_str, 0)
         if w_idx not in weeks:
             weeks[w_idx] = {}
         weeks[w_idx][w_day] = {"date": d, "level": lvl, "date_str": d_str}
+        d += timedelta(days=1)
 
-    num_weeks = max(weeks.keys()) + 1 # 53 weeks
+    num_weeks = max(weeks.keys()) + 1 # 53 weeks (0 to 52)
 
-    # SVG layout with month gaps!
-    # Whenever a week contains the 1st of a month, or week 0, start a new month cluster
+    # Calculate X positions with clean gaps between months
     col_x_positions = {}
     current_x = 55.0
     cell_step = 13.6
-    month_gap = 10.0 # Extra visual space between months!
+    month_gap = 10.0 # Clear gap between months
 
-    month_labels = [] # (x_center, month_name)
-    current_month = None
-    month_start_x = current_x
+    month_ranges = {} # month_num: [x_start, x_end, month_name]
+    last_month = None
 
     for w in range(num_weeks):
-        # Determine the primary month of this week (check day 3 or first day)
+        # Determine dominant month in this week
         week_days = weeks.get(w, {})
+        # Find which month is present in this week
         primary_date = week_days.get(3, week_days.get(0, None))
-        
         if primary_date:
-            m_val = primary_date["date"].month
+            m_num = primary_date["date"].month
             m_name = primary_date["date"].strftime("%b")
-            if current_month is None:
-                current_month = m_val
-                month_start_x = current_x
-            elif m_val != current_month:
-                # Add month gap!
-                current_x += month_gap
-                # Record center of previous month
-                prev_month_name = primary_date["date"].replace(day=1).strftime("%b") # approximate
-                # Find month name for previous
-                prev_date = datetime(primary_date["date"].year, current_month, 1)
-                month_labels.append(((month_start_x + current_x - month_gap) / 2.0, prev_date.strftime("%b")))
-                current_month = m_val
-                month_start_x = current_x
+            
+            if last_month is not None and m_num != last_month:
+                current_x += month_gap # Add monthly gap!
+                
+            if m_num not in month_ranges:
+                month_ranges[m_num] = [current_x, current_x, m_name]
+            else:
+                month_ranges[m_num][1] = current_x # update end x
+                
+            last_month = m_num
 
         col_x_positions[w] = current_x
         current_x += cell_step
 
-    # Last month label
-    if current_month:
-        last_date = datetime(end_date.year, current_month, 1)
-        month_labels.append(((month_start_x + current_x) / 2.0, last_date.strftime("%b")))
-
-    total_grid_width = current_x + 30
-    svg_width = max(940, int(total_grid_width + 40))
+    total_grid_width = current_x + 20
+    svg_width = max(960, int(total_grid_width + 40))
     svg_height = 230
     start_y = 66.0
     row_step = 13.6
@@ -183,15 +182,17 @@ def generate_butterfly_grid():
     svg.append(f'  <rect width="{svg_width - 2}" height="{svg_height - 2}" x="1" y="1" rx="11" fill="none" stroke="#1e293b" stroke-width="1.2"/>')
     svg.append(f'  <rect width="{svg_width - 8}" height="{svg_height - 8}" x="4" y="4" rx="9" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="8,6"/>')
 
-    # Header with Real Data stats
+    # Header with Real Data stats for current year
     svg.append('  <g transform="translate(55, 27)">')
-    svg.append(f'    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ CELESTIAL CONTRIBUTION ARCHIVES · {total_contribs_str.upper()} CONTRIBUTIONS ✦</text>')
-    svg.append(f'    <text y="14" class="mono grid-sub">{active_count} active starlight days recorded across 53 weeks with monthly clustering</text>')
+    svg.append(f'    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ {current_year} CELESTIAL CONTRIBUTION ARCHIVES · {total_contribs_str.upper()} CONTRIBUTIONS ✦</text>')
+    svg.append(f'    <text y="14" class="mono grid-sub">{active_count} active starlight days in {current_year} · Full calendar year from Jan to Dec with monthly clustering</text>')
     svg.append('  </g>')
 
-    # Month Labels with proper spacing
-    for mx, mname in month_labels:
-        svg.append(f'  <text x="{mx:.1f}" y="56" class="mono month-label" text-anchor="middle">{mname}</text>')
+    # Month Labels with centered positions over each month's columns
+    for m_num in sorted(month_ranges.keys()):
+        x_start, x_end, m_name = month_ranges[m_num]
+        center_x = (x_start + x_end) / 2.0
+        svg.append(f'  <text x="{center_x:.1f}" y="56" class="mono month-label" text-anchor="middle">{m_name}</text>')
 
     # Day of week labels (Mon, Wed, Fri)
     days_labels = [("Mon", 1), ("Wed", 3), ("Fri", 5)]
@@ -229,8 +230,7 @@ def generate_butterfly_grid():
                 
                 svg.append(f'  {poly}')
 
-    # Generate smooth butterfly flight trajectory across real active days
-    # Select 12 key waypoints distributed across the year
+    # Generate smooth butterfly flight trajectory across real active days in current_year
     if len(active_waypoints) >= 12:
         step = len(active_waypoints) // 12
         flight_points = [active_waypoints[i * step] for i in range(12)]
@@ -274,7 +274,7 @@ def generate_butterfly_grid():
     leg_x = svg_width - 195
     leg_y = 196
     svg.append('  <g>')
-    svg.append(f'    <text x="55" y="198" class="mono legend-text">🦋 SHOREKEEPER BUTTERFLY · REAL-TIME STREAMS FROM GITHUB</text>')
+    svg.append(f'    <text x="55" y="198" class="mono legend-text">🦋 SHOREKEEPER BUTTERFLY · {current_year} REAL-TIME ARCHIVES</text>')
     svg.append(f'    <text x="{leg_x - 30}" y="198" class="mono axis-label">Less</text>')
     svg.append(f'    <polygon points="{leg_x},{leg_y-4} {leg_x+4},{leg_y} {leg_x},{leg_y+4} {leg_x-4},{leg_y}" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>')
     svg.append(f'    <polygon points="{leg_x+14},{leg_y-4.5} {leg_x+18.5},{leg_y} {leg_x+14},{leg_y+4.5} {leg_x+9.5},{leg_y}" fill="url(#crystalL1)" stroke="#38bdf8" stroke-width="0.9"/>')
@@ -290,7 +290,7 @@ def generate_butterfly_grid():
     out_path = r'c:\Users\techp\Downloads\more projects\Github profile\brovk2008\assets\contribution-crystals.svg'
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print(f"Generated {out_path} ({len(content)} bytes) with real GitHub calendar!")
+    print(f"Generated {out_path} ({len(content)} bytes) for full year {current_year}!")
 
 if __name__ == '__main__':
     generate_butterfly_grid()
