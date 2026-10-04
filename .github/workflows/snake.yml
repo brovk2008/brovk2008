@@ -26,12 +26,19 @@ jobs:
 
       - name: Generate Butterfly Crystal Grid
         run: python generate_butterfly_contribution.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add assets/contribution-crystals.svg
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update butterfly contribution crystals [skip ci]" && git push origin main)
+          if git diff --staged --quiet; then
+            echo "No changes in contribution crystals to commit."
+          else
+            git commit -m "chore: sync live contribution crystals [skip ci]"
+            git push origin main
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

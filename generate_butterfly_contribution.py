@@ -1,33 +1,139 @@
+import os
+import json
 import urllib.request
 import re
 from datetime import datetime, date, timedelta
+
+def fetch_real_contributions(username="brovk2008", year=None):
+    if year is None:
+        year = datetime.now().year
+
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+
+    # Strategy 1: GitHub Official GraphQL API (Primary when GITHUB_TOKEN is available in Actions)
+    if token:
+        print(f"Querying GitHub GraphQL API for {username} ({year})...")
+        query = """
+        query($login: String!, $from: DateTime!, $to: DateTime!) {
+          user(login: $login) {
+            contributionsCollection(from: $from, to: $to) {
+              contributionCalendar {
+                totalContributions
+                weeks {
+                  contributionDays {
+                    date
+                    contributionCount
+                    contributionLevel
+                    weekday
+                  }
+                }
+              }
+            }
+          }
+        }
+        """
+        variables = {
+            "login": username,
+            "from": f"{year}-01-01T00:00:00Z",
+            "to": f"{year}-12-31T23:59:59Z"
+        }
+        payload = json.dumps({"query": query, "variables": variables}).encode("utf-8")
+        req = urllib.request.Request(
+            "https://api.github.com/graphql",
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "User-Agent": "Antigravity-Shorekeeper-Agent",
+                "Content-Type": "application/json"
+            }
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                res = json.loads(resp.read().decode("utf-8"))
+                cal = res["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+                total = cal["totalContributions"]
+                level_map = {
+                    "NONE": 0,
+                    "FIRST_QUARTILE": 1,
+                    "SECOND_QUARTILE": 2,
+                    "THIRD_QUARTILE": 3,
+                    "FOURTH_QUARTILE": 4
+                }
+                date_to_data = {}
+                for w in cal["weeks"]:
+                    for day in w["contributionDays"]:
+                        date_to_data[day["date"]] = {
+                            "level": level_map.get(day["contributionLevel"], 0),
+                            "count": day["contributionCount"]
+                        }
+                print(f"GraphQL API returned {total} contributions across {len(date_to_data)} days.")
+                return total, date_to_data
+        except Exception as e:
+            print("GraphQL query failed, falling back to live scraper:", e)
+
+    # Strategy 2: High-Precision Live Scraper (Robust, zero-dependency fallback)
+    print(f"Fetching public contribution calendar for {username} ({year})...")
+    url = f"https://github.com/users/{username}/contributions?from={year}-01-01&to={year}-12-31"
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+    
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        html = resp.read().decode('utf-8')
+
+    # Extract all TD cells: data-date, id, data-level
+    pattern = re.compile(r'data-date="([^"]+)"\s+id="([^"]+)"\s+data-level="([^"]+)"')
+    td_matches = pattern.findall(html)
+    
+    if not td_matches:
+        # Flexible attribute order fallback
+        td_raw = re.findall(r'<td\s+([^>]+class="ContributionCalendar-day"[^>]*)>', html)
+        td_matches = []
+        for raw in td_raw:
+            d_m = re.search(r'data-date="([^"]+)"', raw)
+            id_m = re.search(r'id="([^"]+)"', raw)
+            lvl_m = re.search(r'data-level="([^"]+)"', raw)
+            if d_m and id_m and lvl_m:
+                td_matches.append((d_m.group(1), id_m.group(1), lvl_m.group(1)))
+
+    # Extract tooltips: <tool-tip for="id">N contribution(s)...</tool-tip>
+    tooltips = re.findall(r'<tool-tip[^>]*for="([^"]+)"[^>]*>(.*?)</tool-tip>', html, re.DOTALL)
+    id_to_count = {}
+    for for_id, tip_text in tooltips:
+        count_m = re.search(r'(\d+)\s+contribution', tip_text)
+        if count_m:
+            id_to_count[for_id] = int(count_m.group(1))
+
+    total_commits = 0
+    date_to_data = {}
+    for dt, el_id, lvl in td_matches:
+        cnt = id_to_count.get(el_id, 0)
+        total_commits += cnt
+        date_to_data[dt] = {
+            "level": int(lvl),
+            "count": cnt
+        }
+
+    # Reconcile with official year H2 header if available
+    h2_m = re.search(r'([0-9,]+)\s+contributions\s+in\s+' + str(year), html, re.I)
+    if not h2_m:
+        h2_m = re.search(r'([0-9,]+)\s+contributions', html, re.I)
+    if h2_m:
+        official_total = int(h2_m.group(1).replace(",", ""))
+        if official_total > total_commits:
+            total_commits = official_total
+
+    print(f"Scraper returned {total_commits} real contributions across {len(date_to_data)} days.")
+    return total_commits, date_to_data
+
 
 def generate_butterfly_grid():
     now = datetime.now()
     current_year = now.year
 
-    url = f"https://github.com/users/brovk2008/contributions?from={current_year}-01-01&to={current_year}-12-31"
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    
-    html = ""
-    try:
-        with urllib.request.urlopen(req) as resp:
-            html = resp.read().decode('utf-8')
-    except Exception as e:
-        print(f"Failed to fetch from GitHub for {current_year}:", e)
-        return
+    total_contribs, date_to_data = fetch_real_contributions(username="brovk2008", year=current_year)
+    total_contribs_str = f"{total_contribs:,}"
 
-    # Extract total contribution count for current year
-    total_contribs_match = re.search(r'([0-9,]+)\s+contributions', html, re.I)
-    total_contribs_str = total_contribs_match.group(1) if total_contribs_match else "1,345"
-
-    # Extract all data-date and data-level
-    pattern = re.compile(r'<td[^>]*data-date="([^"]+)"[^>]*data-level="([^"]+)"')
-    matches = pattern.findall(html)
-    date_to_level = {m[0]: int(m[1]) for m in matches}
-    
-    if not date_to_level:
-        print("No contribution dates parsed!")
+    if not date_to_data:
+        print("Error: No data retrieved!")
         return
 
     # Set up full calendar year for current_year: Jan 1 to Dec 31
@@ -45,10 +151,15 @@ def generate_butterfly_grid():
         w_day = (d.weekday() + 1) % 7
         w_idx = (d - start_sunday).days // 7
         d_str = d.strftime("%Y-%m-%d")
-        lvl = date_to_level.get(d_str, 0)
+        item = date_to_data.get(d_str, {"level": 0, "count": 0})
         if w_idx not in weeks:
             weeks[w_idx] = {}
-        weeks[w_idx][w_day] = {"date": d, "level": lvl, "date_str": d_str}
+        weeks[w_idx][w_day] = {
+            "date": d,
+            "level": item["level"],
+            "count": item.get("count", 0),
+            "date_str": d_str
+        }
         d += timedelta(days=1)
 
     num_weeks = max(weeks.keys()) + 1 # 53 weeks (0 to 52)
@@ -63,9 +174,7 @@ def generate_butterfly_grid():
     last_month = None
 
     for w in range(num_weeks):
-        # Determine dominant month in this week
         week_days = weeks.get(w, {})
-        # Find which month is present in this week
         primary_date = week_days.get(3, week_days.get(0, None))
         if primary_date:
             m_num = primary_date["date"].month
@@ -90,7 +199,7 @@ def generate_butterfly_grid():
     start_y = 66.0
     row_step = 13.6
 
-    active_count = sum(1 for lvl in date_to_level.values() if lvl > 0)
+    active_count = sum(1 for item in date_to_data.values() if item["level"] > 0 or item.get("count", 0) > 0)
 
     # Build SVG
     svg = []
@@ -146,8 +255,7 @@ def generate_butterfly_grid():
 
     svg.append('    <filter id="peakGlow" x="-80%" y="-80%" width="260%" height="260%">')
     svg.append('      <feGaussianBlur stdDeviation="4.5" result="b1"/>')
-    svg.append('      <feGaussianBlur stdDeviation="1.5" result="b2"/>')
-    svg.append('      <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>')
+    svg.append('      <feMerge><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>')
     svg.append('    </filter>')
 
     # Butterfly Symbol
@@ -182,10 +290,10 @@ def generate_butterfly_grid():
     svg.append(f'  <rect width="{svg_width - 2}" height="{svg_height - 2}" x="1" y="1" rx="11" fill="none" stroke="#1e293b" stroke-width="1.2"/>')
     svg.append(f'  <rect width="{svg_width - 8}" height="{svg_height - 8}" x="4" y="4" rx="9" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="8,6"/>')
 
-    # Header with Real Data stats for current year
+    # Header with Dynamically Real Contribution Count
     svg.append('  <g transform="translate(55, 27)">')
     svg.append(f'    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ {current_year} CELESTIAL CONTRIBUTION ARCHIVES · {total_contribs_str.upper()} CONTRIBUTIONS ✦</text>')
-    svg.append(f'    <text y="14" class="mono grid-sub">{active_count} active starlight days in {current_year} · Full calendar year from Jan to Dec with monthly clustering</text>')
+    svg.append(f'    <text y="14" class="mono grid-sub">{active_count} active starlight days in {current_year} · Live calendar synchronization every 6 hours</text>')
     svg.append('  </g>')
 
     # Month Labels with centered positions over each month's columns
@@ -212,11 +320,12 @@ def generate_butterfly_grid():
             if day_idx in week_days:
                 item = week_days[day_idx]
                 lvl = item["level"]
+                cnt = item.get("count", 0)
                 
-                if lvl > 0:
-                    active_waypoints.append((cx, cy, lvl, item["date_str"]))
+                if lvl > 0 or cnt > 0:
+                    active_waypoints.append((cx, cy, lvl, cnt, item["date_str"]))
 
-                if lvl == 0:
+                if lvl == 0 and cnt == 0:
                     poly = f'<polygon points="{cx:.1f},{cy-4.2:.1f} {cx+4.2:.1f},{cy:.1f} {cx:.1f},{cy+4.2:.1f} {cx-4.2:.1f},{cy:.1f}" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>'
                 elif lvl == 1:
                     poly = f'<polygon points="{cx:.1f},{cy-4.8:.1f} {cx+4.8:.1f},{cy:.1f} {cx:.1f},{cy+4.8:.1f} {cx-4.8:.1f},{cy:.1f}" fill="url(#crystalL1)" stroke="#38bdf8" stroke-width="0.9"/>'
@@ -237,7 +346,7 @@ def generate_butterfly_grid():
     elif active_waypoints:
         flight_points = active_waypoints
     else:
-        flight_points = [(100, 80, 1, ""), (300, 120, 1, ""), (500, 90, 1, ""), (700, 130, 1, "")]
+        flight_points = [(100, 80, 1, 1, ""), (300, 120, 1, 1, ""), (500, 90, 1, 1, ""), (700, 130, 1, 1, "")]
 
     path_segs = [f"M {flight_points[0][0] - 20:.1f},{flight_points[0][1] + 15:.1f}"]
     for i, pt in enumerate(flight_points):
@@ -287,10 +396,12 @@ def generate_butterfly_grid():
     svg.append('</svg>')
 
     content = "\n".join(svg)
-    out_path = r'c:\Users\techp\Downloads\more projects\Github profile\brovk2008\assets\contribution-crystals.svg'
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    out_path = os.path.join(script_dir, 'assets', 'contribution-crystals.svg')
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print(f"Generated {out_path} ({len(content)} bytes) for full year {current_year}!")
+    print(f"Generated {out_path} ({len(content)} bytes) for {current_year}: {total_contribs_str} contributions!")
 
 if __name__ == '__main__':
     generate_butterfly_grid()
