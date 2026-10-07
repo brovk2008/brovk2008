@@ -68,8 +68,8 @@
   <rect width="958" height="228" x="1" y="1" rx="11" fill="none" stroke="#1e293b" stroke-width="1.2"/>
   <rect width="952" height="222" x="4" y="4" rx="9" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="8,6"/>
   <g transform="translate(55, 27)">
-    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ 2026 CELESTIAL CONTRIBUTION ARCHIVES · 1,347 CONTRIBUTIONS ✦</text>
-    <text y="14" class="mono grid-sub">95 active starlight days in 2026 · Live calendar synchronization every 6 hours</text>
+    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ 2026 CELESTIAL CONTRIBUTION ARCHIVES · 1,348 CONTRIBUTIONS ✦</text>
+    <text y="14" class="mono grid-sub">96 active starlight days in 2026 · Live calendar synchronization every 6 hours</text>
   </g>
   <text x="89.0" y="56" class="mono month-label" text-anchor="middle">Jan</text>
   <text x="153.4" y="56" class="mono month-label" text-anchor="middle">Feb</text>
@@ -365,7 +365,7 @@
   <polygon points="689.0,61.2 693.8,66.0 689.0,70.8 684.2,66.0" fill="url(#crystalL1)" stroke="#38bdf8" stroke-width="0.9"/>
   <polygon points="689.0,75.4 693.2,79.6 689.0,83.8 684.8,79.6" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="689.0,89.0 693.2,93.2 689.0,97.4 684.8,93.2" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
-  <polygon points="689.0,102.6 693.2,106.8 689.0,111.0 684.8,106.8" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
+  <polygon points="689.0,102.0 693.8,106.8 689.0,111.6 684.2,106.8" fill="url(#crystalL1)" stroke="#38bdf8" stroke-width="0.9"/>
   <polygon points="689.0,116.2 693.2,120.4 689.0,124.6 684.8,120.4" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="689.0,129.8 693.2,134.0 689.0,138.2 684.8,134.0" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="689.0,143.4 693.2,147.6 689.0,151.8 684.8,147.6" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
@@ -451,7 +451,7 @@
   <polygon points="872.2,89.0 876.4,93.2 872.2,97.4 868.0,93.2" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="872.2,102.6 876.4,106.8 872.2,111.0 868.0,106.8" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="872.2,116.2 876.4,120.4 872.2,124.6 868.0,120.4" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
-  <path id="butterflyTrack" d="M 282.6,162.6 C 287.6,159.6 294.6,147.6 302.6,147.6 C 324.8,54.0 331.8,66.0 339.8,66.0 C 389.2,159.6 396.2,147.6 404.2,147.6 C 416.4,81.2 423.4,93.2 431.4,93.2 C 453.6,91.6 460.6,79.6 468.6,79.6 C 467.2,81.2 474.2,93.2 482.2,93.2 C 480.8,105.2 487.8,93.2 495.8,93.2 C 494.4,122.0 501.4,134.0 509.4,134.0 C 545.2,91.6 552.2,79.6 560.2,79.6 C 572.4,54.0 579.4,66.0 587.4,66.0 C 596.0,118.8 603.0,106.8 611.0,106.8 C 609.6,108.4 616.6,120.4 624.6,120.4 C 920.0,180 940.0,210 990.0,210" fill="none" stroke="none"/>
+  <path id="butterflyTrack" d="M 282.6,162.6 C 287.6,159.6 294.6,147.6 302.6,147.6 C 324.8,81.2 331.8,93.2 339.8,93.2 C 402.8,105.2 409.8,93.2 417.8,93.2 C 416.4,122.0 423.4,134.0 431.4,134.0 C 453.6,146.0 460.6,134.0 468.6,134.0 C 480.8,54.0 487.8,66.0 495.8,66.0 C 494.4,132.4 501.4,120.4 509.4,120.4 C 545.2,67.6 552.2,79.6 560.2,79.6 C 572.4,91.6 579.4,79.6 587.4,79.6 C 596.0,122.0 603.0,134.0 611.0,134.0 C 623.2,78.0 630.2,66.0 638.2,66.0 C 636.8,81.2 643.8,93.2 651.8,93.2 C 920.0,180 940.0,210 990.0,210" fill="none" stroke="none"/>
   <g>
     <animateMotion dur="20s" repeatCount="indefinite" rotate="auto">
       <mpath href="#butterflyTrack"/>
