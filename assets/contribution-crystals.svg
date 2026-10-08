@@ -68,8 +68,8 @@
   <rect width="958" height="228" x="1" y="1" rx="11" fill="none" stroke="#1e293b" stroke-width="1.2"/>
   <rect width="952" height="222" x="4" y="4" rx="9" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="8,6"/>
   <g transform="translate(55, 27)">
-    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ 2026 CELESTIAL CONTRIBUTION ARCHIVES · 1,348 CONTRIBUTIONS ✦</text>
-    <text y="14" class="mono grid-sub">96 active starlight days in 2026 · Live calendar synchronization every 6 hours</text>
+    <text y="0" class="mono grid-title" filter="url(#softGlow)">✦ 2026 CELESTIAL CONTRIBUTION ARCHIVES · 1,353 CONTRIBUTIONS ✦</text>
+    <text y="14" class="mono grid-sub">97 active starlight days in 2026 · Live calendar synchronization every 6 hours</text>
   </g>
   <text x="89.0" y="56" class="mono month-label" text-anchor="middle">Jan</text>
   <text x="153.4" y="56" class="mono month-label" text-anchor="middle">Feb</text>
@@ -366,7 +366,7 @@
   <polygon points="689.0,75.4 693.2,79.6 689.0,83.8 684.8,79.6" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="689.0,89.0 693.2,93.2 689.0,97.4 684.8,93.2" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="689.0,102.0 693.8,106.8 689.0,111.6 684.2,106.8" fill="url(#crystalL1)" stroke="#38bdf8" stroke-width="0.9"/>
-  <polygon points="689.0,116.2 693.2,120.4 689.0,124.6 684.8,120.4" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
+  <polygon points="689.0,115.6 693.8,120.4 689.0,125.2 684.2,120.4" fill="url(#crystalL1)" stroke="#38bdf8" stroke-width="0.9"/>
   <polygon points="689.0,129.8 693.2,134.0 689.0,138.2 684.8,134.0" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="689.0,143.4 693.2,147.6 689.0,151.8 684.8,147.6" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
   <polygon points="702.6,61.8 706.8,66.0 702.6,70.2 698.4,66.0" fill="#0b1324" stroke="#16233b" stroke-width="0.8"/>
